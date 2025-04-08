@@ -8,19 +8,32 @@ e buonasera se è sera (oltre le 17)
 const name = "Mario";
 
 // Dichiara la funzione qui.
+// function greetUserForDifferentTimes(userName) {
+//   const now = new Date();
+//   const hour = now.getHours();
+//   if (hour >= 6 && hour <= 13) {
+//     return "Buongiorno " + userName;
+//   }
+//   if (hour > 13 && hour <= 17) {
+//     return "Buon pomeriggio " + userName;
+//   } else {
+//     return "Buonasera " + userName;
+//   }
+// }
+
+// Invoca la funzione qui e stampa il risultato in console
+// console.log(greetUserForDifferentTimes(name));
+
+//Risultato atteso se si passa 'Mario' alle 18: // Buonasera Mario.
 function greetUserForDifferentTimes(userName) {
   const now = new Date();
   const hour = now.getHours();
-  if (hour >= 6 && hour <= 13) {
-    return "Buongiorno " + userName;
-  } else if (hour > 13 && hour <= 17) {
-    return "Buon pomeriggio " + userName;
-  } else if (hour > 17) {
-    return "Buonasera " + userName;
-  }
+  const greet =
+    hour >= 6 && hour <= 13
+      ? "Buongiorno"
+      : hour > 13 && hour <= 17
+      ? "Buon pomeriggio"
+      : "Buonasera";
+  return `${greet} ${userName}`;
 }
-
-// Invoca la funzione qui e stampa il risultato in console
 console.log(greetUserForDifferentTimes(name));
-
-//Risultato atteso se si passa 'Mario' alle 18: // Buonasera Mario.
