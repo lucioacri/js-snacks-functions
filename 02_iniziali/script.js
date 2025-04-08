@@ -12,7 +12,7 @@ const names = [
 ];
 
 // Dichiara la funzione qui.
-// function getInitials(takeNames, initials) {
+// function getInitials(takeNames) {
 //   const namesInitial = [];
 //   for (let i = 0; i < takeNames.length; i++) {
 //     let arrayNames = takeNames[i];
@@ -26,7 +26,7 @@ const names = [
 // console.log(getInitials(names));
 
 //Risultato atteso: ["A", "L", "M", "A", "G", "A"]
-const getInitials = (takeNames, initials) => {
+const getInitials = (takeNames) => {
   const namesInitial = [];
   for (let i = 0; i < takeNames.length; i++) {
     let arrayNames = takeNames[i];
